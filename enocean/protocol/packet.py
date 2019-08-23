@@ -235,6 +235,7 @@ class Packet(object):
 
         # Parse the built packet, so it corresponds to the received packages
         # For example, stuff like RadioPacket.learn should be set.
+        
         packet = Packet.parse_msg(packet.build())[2]
         packet.rorg = rorg
         packet.parse_eep(rorg_func, rorg_type, direction, command)
@@ -283,6 +284,7 @@ class Packet(object):
         ords.extend(self.data)
         ords.extend(self.optional)
         ords.append(crc8.calc(ords[6:]))
+        print("ORDS: " + str(ords))
         return ords
 
 
