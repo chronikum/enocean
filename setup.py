@@ -5,7 +5,7 @@ except ImportError:
     from distutils.core import setup
 
 setup(
-    name='enocean',
+    name='nos_enocean',
     version='0.50.1',
     description='EnOcean serial protocol implementation',
     author='Kimmo Huoman',
